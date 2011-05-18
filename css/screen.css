@@ -142,6 +142,13 @@ ul.posts {
         border: 0;
       }
 
+  .site .credits {
+    font-size: 72%;
+    color: #aaa;
+    text-align: right;
+    overflow: hidden;
+  }
+
 /*****************************************************************************/
 /*
 /* Posts
