@@ -1,13 +1,54 @@
----
-layout: default
-title: Tomek Wałkuski
----
-
-<div id="home">
-	<h1>Blog Posts</h1>
-	<ul class="posts">
-		{% for post in site.posts %}
-		<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-		{% endfor %}
-	</ul>
-</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tomek Wałkuski - Ruby Software Engineer</title>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <meta content='eBsWf0fHKjRMKPFZhBbDjrbpRkCwnNXirkwB_s0YWwM' name='google-site-verification' />
+    <link href='styles/tipsy.css' rel='stylesheet' type='text/css' />
+    <link href='styles/application.css' rel='stylesheet' type='text/css' />
+    <script src='js/jquery.min.js' type='text/javascript'></script>
+    <script src='js/jquery.tipsy.js' type='text/javascript'></script>
+    <script src='js/application.js' type='text/javascript'></script>
+  </head>
+  <body>
+    <div id='wrapper'>
+      <div id='container'>
+        <div id='box'>
+          <div id='content'>
+            <div id='text'>
+              <div id='header'>
+                <h1>Tomek Wałkuski</h1>
+                <h2>Ruby Software Engineer</h2>
+              </div>
+              <dl>
+                <dt>Email:</dt>
+                <dd>ja (at) jestem.tw</dd>
+                <dt>GitHub:</dt>
+                <dd>
+                  <a href='https://github.com/tomekw' target='_blank' title='GitHub'>tomekw</a>
+                </dd>
+                <dt>CV:</dt>
+                <dd>
+                  <a href='files/CV.pdf' target='_blank' title='Curriculum Vitae'>link</a>
+                  (PDF)
+                </dd>
+                <dt>WWR:</dt>
+                <dd>
+                  <a href='http://www.workingwithrails.com/person/21636-tomasz-wa-kuski' target='_blank' title='Working with Rails'>tomekw</a>
+                </dd>
+              </dl>
+            </div>
+            <div id='logo'>
+              <img src='images/tw.png' />
+            </div>
+            <div id='description'>
+              <p>
+                Professional Ruby programmer, project team leader at&nbsp;<a href='http://www.innov8on.com' target='_blank' title='Innov8on'>Innov8on</a>; technology, cycling and astronomy enthusiast.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

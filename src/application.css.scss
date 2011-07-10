@@ -1,0 +1,140 @@
+$width: 420px;
+$height: 220px;
+$shadow-color: #aaa;
+
+@mixin outer-border {
+  border: 0.5em solid #eee;
+}
+
+@mixin inner-border {
+  border: 1px solid #ccc;
+}
+
+@mixin gradient-background {
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0, #f8f8f8),
+    color-stop(0.57, #fff)
+  );
+  background-image: -moz-linear-gradient(
+    center bottom,
+    #f8f8f8 0%,
+    #fff 57%
+  );
+}
+
+@mixin box-shadow {
+  -webkit-box-shadow: 2px 2px 2px 2px $shadow-color;
+  -moz-box-shadow: 2px 2px 2px 2px $shadow-color;
+  box-shadow: 2px 2px 2px 2px $shadow-color;
+}
+
+body {
+  background: #fff;
+  color: #333;
+  font-family: 'Helvetica', 'Verdana';
+  font-size: 12px;
+  min-height: $height;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+}
+
+html, body{
+  height: 100%;
+  width: 100%;
+}
+
+#wrapper {
+  height: 100%;
+  width: 100%;
+  display: table;
+  vertical-align: middle;
+
+  #container {
+    display: table-cell;
+    height: $height;
+    position: relative;
+    vertical-align: middle;
+
+    #box {
+      width: $width;
+      height: $height;
+      margin-left: auto;
+      margin-right: auto;
+      @include outer-border;
+      @include gradient-background;
+      @include box-shadow;
+
+      #content {
+        height: $height - 26px;
+        padding: 1em;
+        @include inner-border;
+      }
+    }
+  }
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+#header {
+  margin-bottom: 1em;
+
+  h1 {
+    color: #222;
+    text-shadow: 1px 1px 1px $shadow-color;
+    filter: dropshadow(color=$shadow-color, offx=1, offy=1);
+  }
+
+  h2 {
+    color: #777;
+  }
+}
+
+#text {
+  float: left;
+}
+
+#logo {
+  float: right;
+}
+
+#description {
+  clear: both;
+  padding-top: 0.5em;
+}
+
+dl {
+  dt {
+    float: left;
+    width: 6em;
+    font-weight: bold;
+    line-height: 1.5em;
+  }
+
+  dd {
+    line-height: 1.5em;
+  }
+}
+
+img {
+  padding: 0.5em;
+  background: #fff;
+  @include inner-border;
+}
+
+a:link, a:visited {
+  color: #0054B4;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  color: #555;
+}
