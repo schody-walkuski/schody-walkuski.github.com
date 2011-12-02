@@ -34,11 +34,8 @@ body {
         padding: 13px;
         border: 1px solid #ccc; }
 
-h1, h2 {
-  margin: 0; }
-
-h3 {
-  margin: 0.5em; }
+h1 {
+  margin-bottom: 0.5em; }
 
 #header {
   margin-bottom: 1em; }
