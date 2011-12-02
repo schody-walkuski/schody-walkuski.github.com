@@ -1,14 +1,18 @@
 !!!5
 %html
   %head
-    %title Tomek Wałkuski - Ruby Software Engineer
+    %title schody-walkuski.pl
     %meta{ :'http-equiv' => 'Content-Type', :content =>'text/html; charset=UTF-8' }/
     %meta{ :name => 'google-site-verification', :content => 'eBsWf0fHKjRMKPFZhBbDjrbpRkCwnNXirkwB_s0YWwM' }/
-    %meta{ :name => 'description', :content => 'Tomek Wałkuski - Ruby Software Engineer' }/
-    %link{ :rel => 'stylesheet', :href => 'styles/tipsy.css', :type => 'text/css' }/
+    %meta{ :name => 'description', :content => 'schody-walkuski.pl - przepiękne schody i drzwi z drewna' }/
+    %link{ :rel => 'stylesheet', :href => 'styles/jquery.tipsy.css', :type => 'text/css' }/
+    %link{ :rel => 'stylesheet', :href => 'styles/jquery.fancybox.css', :type => 'text/css' }/
     %link{ :rel => 'stylesheet', :href => 'styles/application.css', :type => 'text/css' }/
     %script{ :type => 'text/javascript', :src => 'js/jquery.min.js' }
     %script{ :type => 'text/javascript', :src => 'js/jquery.tipsy.js' }
+    %script{ :type => 'text/javascript', :src => 'js/jquery.easing.js' }
+    %script{ :type => 'text/javascript', :src => 'js/jquery.mousewheel.js' }
+    %script{ :type => 'text/javascript', :src => 'js/jquery.fancybox.js' }
     %script{ :type => 'text/javascript', :src => 'js/application.js' }
     :javascript
       var _gaq = _gaq || [];
@@ -24,30 +28,12 @@
       #container
         #box
           #content
-            #text
-              #header
-                %h1 Tomek Wałkuski
-                %h2 Ruby Software Engineer
-              %dl
-                %dt Email:
-                %dd ja (at) jestem.tw
-                %dt GitHub:
-                %dd
-                  %a{ :href => 'https://github.com/tomekw', :target => '_blank', :title => 'GitHub' } tomekw
-                %dt CV:
-                %dd
-                  %a{ :href => 'files/CV.pdf', :target => '_blank', :title => 'Curriculum Vitae' } link
-                  (PDF)
-                %dt WWR:
-                %dd
-                  %a{ :href => 'http://www.workingwithrails.com/person/21636-tomasz-wa-kuski', :target => '_blank', :title => 'Working with Rails' } tomekw
-            #logo
-              %img{ :src => 'images/tw.png' }/
-            #description
-              %p
-                Professional Ruby programmer at&nbsp;
-                %a{ :href => 'http://jobandtalent.com', :target => '_blank', :title => 'jobandtalent.com' }>
-                  %strong> job
-                  and
-                  %strong> talent
-                ; technology, cycling and&nbsp;astronomy enthusiast.
+            #header
+              %h1 Schody Wałkuski
+              %h2 Przepiękne schody i drzwi z drewna
+            #gallery
+              - (1..15).each do |number|
+                .image_wrapper
+                  %a{ :class => :fancybox, :rel => :gallery, :href => "images/#{number}.jpg" }
+                    %img{ :src => "images/#{number}_thumb.jpg", :border => 0 }
+              %span

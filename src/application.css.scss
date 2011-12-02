@@ -1,5 +1,5 @@
-$width: 420px;
-$height: 220px;
+$width: 960px;
+$height: 640px;
 $shadow-color: #aaa;
 
 @mixin outer-border {
@@ -36,35 +36,31 @@ body {
   color: #333;
   font-family: 'Helvetica', 'Verdana';
   font-size: 12px;
-  min-height: $height;
 }
 
 * {
   margin: 0;
   padding: 0;
   text-align: justify;
+
 }
 
-html, body{
-  height: 100%;
-  width: 100%;
+body {
+  margin: 1em;
 }
 
 #wrapper {
-  height: 100%;
   width: 100%;
   display: table;
   vertical-align: middle;
 
   #container {
     display: table-cell;
-    height: $height;
     position: relative;
     vertical-align: middle;
 
     #box {
       width: $width;
-      height: $height;
       margin-left: auto;
       margin-right: auto;
       @include outer-border;
@@ -72,8 +68,7 @@ html, body{
       @include box-shadow;
 
       #content {
-        height: $height - 26px;
-        padding: 1em;
+        padding: 13px;
         @include inner-border;
       }
     }
@@ -82,6 +77,10 @@ html, body{
 
 h1, h2 {
   margin: 0;
+}
+
+h3 {
+  margin: 0.5em;
 }
 
 #header {
@@ -98,30 +97,22 @@ h1, h2 {
   }
 }
 
-#text {
-  float: left;
-}
-
-#logo {
-  float: right;
-}
-
-#description {
+#description, #gallery {
   clear: both;
   padding-top: 0.5em;
 }
 
-dl {
-  dt {
-    float: left;
-    width: 6em;
-    font-weight: bold;
-    line-height: 1.5em;
-  }
+#gallery span {
+  clear: both;
+  display: block;
+}
 
-  dd {
-    line-height: 1.5em;
-  }
+.image_wrapper {
+  width: 221px;
+  height: 172px;
+  float: left;
+  padding: 6px;
+  text-align: center;
 }
 
 img {
